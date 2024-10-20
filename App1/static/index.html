@@ -1,0 +1,40 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Rule Engine Application</h1>
+
+    <div id="create-rule">
+        <h2>Create a Rule</h2>
+        <form id="createRuleForm">
+            <label for="ruleName">Rule Name:</label>
+            <input type="text" id="ruleName" name="ruleName" required>
+            <br>
+            <label for="ruleString">Rule String:</label>
+            <textarea id="ruleString" name="ruleString" rows="4" cols="50" required></textarea>
+            <br>
+            <button type="submit">Create Rule</button>
+        </form>
+        <p id="createRuleResult"></p>
+    </div>
+
+    <div id="evaluate-rule">
+        <h2>Evaluate a Rule</h2>
+        <form id="evaluateRuleForm">
+            <label for="ruleData">User Data (JSON format):</label>
+            <textarea id="ruleData" name="ruleData" rows="4" cols="50" required></textarea>
+            <br>
+            <button type="submit">Evaluate Rule</button>
+        </form>
+        <p id="evaluateRuleResult"></p>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
